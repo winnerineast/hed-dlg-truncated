@@ -19,7 +19,9 @@ Prepare your dataset as a text file for with one document per line (e.g. one dia
 Once you're ready, you can create the model dataset files by running:
 
 python convert-text2dict.py &lt;training_file&gt; --cutoff &lt;vocabulary_size&gt; Training
+
 python convert-text2dict.py &lt;validation_file&gt; --dict=Training.dict.pkl Validation
+
 python convert-text2dict.py &lt;test_file&gt; --dict=Training.dict.pkl &lt;vocabulary_size&gt; Test
 
 where &lt;training_file&gt;, &lt;validation_file&gt; and &lt;test_file&gt; are the training, validation and test files, and &lt;vocabulary_size&gt; is the number of tokens that you want to train on (all other tokens, but the most frequent &lt;vocabulary_size&gt; tokens, will be converted to &lt;unk&gt; symbols).
